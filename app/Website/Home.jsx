@@ -1,6 +1,14 @@
-import Link from "next/link";
-import MainButton from "./components-website/MainButton";
-import Navbar from "./components-website/Navbar";
+import Link from "next/link"
+import MainButton from "./components-website/MainButton"
+import Navbar from "./components-website/Navbar"
+import localFont from "next/font/local"
+
+const HeadingFont = localFont({
+  src: "../public/fonts/Inter_18pt-Regular.ttf",
+})
+const Paragraph = localFont({
+  src: "../public/fonts/Inter_24pt-Medium.ttf",
+})
 
 export default function Home() {
   return (
@@ -9,13 +17,13 @@ export default function Home() {
 
       <section className="flex flex-col items-center justify-center text-center flex-1 px-4 sm:px-8 md:px-16">
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-semibold leading-tight max-w-5xl 
-           bg-gradient-to-t from-zinc-400 to-white bg-clip-text text-transparent"
+          className={`${HeadingFont.className} text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-5xl 
+           bg-gradient-to-t from-zinc-400 to-white bg-clip-text text-transparent`}
         >
           Manage your growth here with Minimalism
         </h1>
 
-        <p className="mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+        <p className={`${Paragraph.className} mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed`}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illum
           explicabo. Consequuntur provident sequi.
         </p>
@@ -35,5 +43,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
+  )
 }
