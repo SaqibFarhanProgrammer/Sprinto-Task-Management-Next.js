@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import MainButton from "./components-website/MainButton"
 import Navbar from "./components-website/Navbar"

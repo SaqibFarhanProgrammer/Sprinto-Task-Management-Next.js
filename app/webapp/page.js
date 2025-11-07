@@ -1,10 +1,12 @@
 import React from 'react'
-import Sidebar from './Sidebar'
+import Sidebar from './components-webapp/Sidebar'
+import Main from './components-webapp/Main'
 
 function page() {
   return (
     <div>
         <Sidebar/>
+        <Main/>
     </div>
   )
 }
