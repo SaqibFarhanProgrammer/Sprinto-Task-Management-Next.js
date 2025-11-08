@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react"
 import { MdOutlineDashboardCustomize, MdOutlineAnalytics } from "react-icons/md"
 import { HiOutlineFolder, HiOutlinePlusCircle } from "react-icons/hi2"
@@ -6,7 +7,7 @@ import { IoSettingsOutline } from "react-icons/io5"
 import { LuLayoutDashboard } from "react-icons/lu"
 import { IoMenu, IoClose } from "react-icons/io5"
 
-function Sidebar() {
+function Sidebar() {  
   const [open, setOpen] = useState(false)
 
   return (
@@ -19,7 +20,7 @@ function Sidebar() {
       </button>
 
       <div
-        className={`fixed md:static top-0 left-0 z-40 h-full md:h-[98vh] bg-[#121212] p-2 rounded-2xl flex flex-col justify-between transform transition-transform duration-300 ease-in-out
+        className={`fixed  top-0 left-0 z-40 h-[100vh] md:h-[100vh] bg-[#121212] p-2  flex flex-col justify-between transform transition-transform duration-300 ease-in-out
         ${open ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 w-[70vw] sm:w-[50vw] md:w-[17vw]`}
       >
         <div className="top flex flex-col gap-4">
