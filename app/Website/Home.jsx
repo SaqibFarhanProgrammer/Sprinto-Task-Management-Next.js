@@ -1,9 +1,10 @@
 "use client"
-
+import Image from "next/image"
 import Link from "next/link"
 import MainButton from "./components-website/MainButton"
 import Navbar from "./components-website/Navbar"
 import localFont from "next/font/local"
+import bg from "../Public/images/bg.png"
 
 const HeadingFont = localFont({
   src: "../public/fonts/Inter_18pt-Regular.ttf",
@@ -16,8 +17,13 @@ export default function Home() {
   return (
     <div className="relative bg-black min-h-screen w-full overflow-hidden text-white flex flex-col">
       <Navbar />
-
-      <section className="flex flex-col items-center justify-center text-center flex-1 px-4 sm:px-8 md:px-16">
+      <Image
+      src={bg}
+      className="w-full h-screen absolute top-0 left-0  "
+      alt="bg"
+      loading="lazy"
+      />
+      <section className="flex z-30 flex-col items-center justify-center text-center flex-1 px-4 sm:px-8 md:px-16">
         <h1
           className={`${HeadingFont.className} text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-5xl 
            bg-gradient-to-t from-zinc-400 to-white bg-clip-text text-transparent`}

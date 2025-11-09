@@ -3,7 +3,7 @@ import Link from "next/link"
 
 function Navbar() {
   return (
-    <nav className="w-[90%] sm:w-[85%] md:w-[80%] mx-auto mt-4 rounded-full bg-transparent transition-transform duration-300 hover:scale-[1.01]">
+    <nav className="w-[90%] z-40 backdrop-blur-3xl fixed   left-40 sm:w-[85%] md:w-[80%] mx-auto mt-4 rounded-full bg-transparent transition-transform duration-300 hover:scale-[1.01]">
       <div className="flex items-center justify-between px-5 sm:px-8 py-3">
         <h1 className="text-xl sm:text-2xl font-semibold tracking-tight text-white select-none">
           Osiko
