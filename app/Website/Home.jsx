@@ -1,27 +1,27 @@
-"use client"
-import Image from "next/image"
-import Link from "next/link"
-import MainButton from "./components-website/MainButton"
-import Navbar from "./components-website/Navbar"
-import localFont from "next/font/local"
-import bg from "../Public/images/bg.png"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import MainButton from "./components-website/MainButton";
+import Navbar from "./components-website/Navbar";
+import localFont from "next/font/local";
+import bg from "../Public/images/bg.png";
 
 const HeadingFont = localFont({
   src: "../public/fonts/Inter_18pt-Regular.ttf",
-})
+});
 const Paragraph = localFont({
   src: "../public/fonts/Inter_24pt-Medium.ttf",
-})
+});
 
 export default function Home() {
   return (
     <div className="relative bg-black min-h-screen w-full overflow-hidden text-white flex flex-col">
       <Navbar />
       <Image
-      src={bg}
-      className="w-full h-screen absolute top-0 left-0  "
-      alt="bg"
-      loading="lazy"
+        src={bg}
+        className="w-[80%] h-[80%] absolute top-0 left-44  blur-[60px] "
+        alt="bg"
+        loading="lazy"
       />
       <section className="flex z-30 flex-col items-center justify-center text-center flex-1 px-4 sm:px-8 md:px-16">
         <h1
@@ -31,13 +31,15 @@ export default function Home() {
           Manage your growth here with Minimalism
         </h1>
 
-        <p className={`${Paragraph.className} mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed`}>
+        <p
+          className={`${Paragraph.className} mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed`}
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illum
           explicabo. Consequuntur provident sequi.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          <Link href="/login">
+          <Link href="/auth/login">
             <MainButton
               text="Login"
               classname="bg-gradient-to-r from-gray-900 to-gray-700 text-white hover:from-gray-700 hover:to-gray-900 transition-all duration-300 shadow-md shadow-gray-800"
@@ -51,5 +53,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
