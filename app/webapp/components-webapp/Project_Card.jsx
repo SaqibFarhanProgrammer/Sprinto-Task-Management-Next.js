@@ -12,7 +12,6 @@ function Projects_card() {
             to create, edit, and manage articles with a clean interface.
           </p>
         </div>
-        <FaChevronDown className="text-base opacity-70 hover:opacity-100 cursor-pointer transition-opacity" />
       </div>
 
       <div className="flex justify-between items-center border-white/10 pt-1">

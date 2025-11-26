@@ -39,17 +39,18 @@ export default function Home() {
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          <Link href="/auth/login">
+          <Link href="/auth/signin">
             <MainButton
               text="Login"
               classname="bg-gradient-to-r from-gray-900 to-gray-700 text-white hover:from-gray-700 hover:to-gray-900 transition-all duration-300 shadow-md shadow-gray-800"
             />
           </Link>
-
-          <MainButton
-            text="Manage Your Tasks"
-            classname="bg-white/90 text-black border border-gray-400 hover:bg-gray-100 hover:text-black hover:shadow-md hover:shadow-white/20 transition-all duration-300"
-          />
+          <Link href="/webapp/main/project">
+            <MainButton
+              text="Manage Your Tasks"
+              classname="bg-white/90 text-black border border-gray-400 hover:bg-gray-100 hover:text-black hover:shadow-md hover:shadow-white/20 transition-all duration-300"
+            />
+          </Link>
         </div>
       </section>
     </div>
